@@ -18,7 +18,7 @@ body {
   font-family: 'New Order', sans-serif;
 }
 
-/* HEADER AND NAV */
+/* HEADER */
 
 .header {
   background-color: black;
@@ -32,6 +32,8 @@ body {
  width: 128px;
  height:128px;
 }
+
+/* NAVIGATION */
 
 .nav ul {
   display: flex;
@@ -50,4 +52,26 @@ body {
 .nav a:hover {
   text-decoration: underline;
   font-weight: 600;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px 30px;
+}
+
+footer h3 {
+  font-weight: 400;
 }

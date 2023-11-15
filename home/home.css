@@ -16,6 +16,8 @@ html {
 
 body {
   font-family: 'New Order', sans-serif;
+  font-weight: 100;
+  margin: 0;
 }
 
 /* HEADER */
@@ -50,7 +52,7 @@ body {
 }
 
 .nav a:hover {
-  text-decoration: underline;
+
   font-weight: 600;
 }
 
@@ -59,19 +61,64 @@ body {
 footer {
   background-color: #000;
   color: #fff;
-  padding: 0 10%;
+  padding: 40px 10%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-
-.footer-container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 30px 30px;
+  align-items: flex-start;
 }
 
 footer h3 {
   font-weight: 400;
+  margin-bottom: 20px;
+  font-size: 24px;
 }
+
+footer ul {
+  list-style: none;
+}
+
+footer li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-section {
+  max-width: 33.333%;
+}
+
+.social-links {
+  display: flex; 
+  align-items: left; 
+  gap: 2rem; 
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-links img {
+  width: 3rem; 
+  height: auto; 
+}
+
+.contacts ul,
+.hours ul {
+  padding-left: 0;
+}
+
+.hours-block {
+  margin-bottom: 10px;
+}
+
+.days {
+  display: block;
+  font-weight: 600; 
+  margin-bottom: 5px; 
+}
+
+.time {
+  display: block; 
+  margin-bottom: 2rem; 
+}
+

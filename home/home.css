@@ -52,7 +52,6 @@ body {
 }
 
 .nav a:hover {
-  text-decoration: underline;
   font-weight: 600;
 }
 
@@ -210,3 +209,20 @@ footer li {
   margin-bottom: 2rem; 
 }
 
+.footer-section.contacts ul {
+  padding-left: 0; 
+  list-style: none; 
+}
+
+.footer-section.contacts li {
+  display: flex;
+  align-items: center; 
+  font-size: 16px; 
+  margin-bottom: 10px; 
+}
+
+.contact-icon {
+  margin-right: 8px; 
+  width: 24px; 
+  height: auto; 
+}

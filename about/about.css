@@ -113,7 +113,6 @@ body {
 
 .text-content {
   width: 50%; 
-  margin-right: 48px;
 }
 
 .text-content h2 {
@@ -125,12 +124,14 @@ body {
 .text-content p {
   font-size: 16px; 
   line-height: 1.6; 
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
+  width: 540px;
 }
 
 .founder-signature {
   font-weight: 400;
 }
+
 
 
 /* FOOTER */

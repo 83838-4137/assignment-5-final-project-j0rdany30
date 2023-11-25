@@ -87,17 +87,25 @@ body {
   margin-bottom: 20px;
 }
 
-.btn-learn-more {
+.learn-more-button {
   font-size: 24px;
-  padding: 12px 24px; 
-  background-color: #000; 
+  width: 256px;
+  height: 64px;
+  line-height: 64px; 
+  background-color: #000;
   color: #fff;
+  border: none;
+  cursor: pointer;
   text-transform: uppercase;
-  text-align: center;
-  display: inline-block; 
   text-decoration: none;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  display: inline-block; 
+  text-align: center; 
 }
 
+.learn-more-button:hover {
+  transform: scale(1.05); /* Slight increase in size on hover */
+}
 /* CARDS */
 
 .cards {

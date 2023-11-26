@@ -92,6 +92,74 @@ body {
 
 /* MENU */
 
+.accordion {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  text-align: left;
+  outline: none;
+  width: 100%;
+  transition: 0.4s;
+}
+
+.accordion.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.menu-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu-item {
+  margin-bottom: 10px;
+}
+
+.menu-item h3 {
+  font-size: 1.25em;
+  color: #000;
+}
+
+.menu-item p {
+  font-size: 1em;
+  color: #666;
+}
+
+.menu-item .price {
+  font-size: 1em;
+  color: #333;
+  float: right;
+}
+
+.menu-section-image {
+  width: 100%;
+  display: block;
+  margin-top: 20px;
+}
+
+
 
 /* FOOTER */
 

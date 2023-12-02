@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>876 Bar & Grill</title>
 <link href="https://use.typekit.net/upf4itu.css" rel="stylesheet"> 
-<link rel="stylesheet" href="reserve.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -15,56 +15,38 @@
 
     <header class="header">
         <h1 class="logo">
-            <li><a href="/home/home.html">
+            <li><a href="index.html">
                 <img src="/images/876-logo.svg" alt="876"></a></li>
         </h1>
 
         <nav class="nav">
             <ul>
-                <li><a href="/menu/menu.html">MENU</a></li>
-                <li><a href="/reserve/reserve.html">RESERVE</a></li>
-                <li><a href="/about/about.html">ABOUT</a></li>
-                <li><a href="/gallery/gallery.html">GALLERY</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="reserve.html">RESERVE</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- HERO SECTION -->
 
-      <section class="hero">
+      <section class="hero hero-reserve">
         <div class="hero-content">
-            <h1>reserve</h1>
-            <p>Embark on a culinary journey in true Jamaican ambiance.</p>
+            <h1>thank you</h1>
         </div>
       </section>
-    
-    <!-- FORM SECTION -->
 
-    <section class="reserve-form">
-        <form action="#" method="post" class="form-grid">
-            <div class="form-group">
-                <input type="text" id="name" name="name" placeholder="Name" required>
+        <!-- CONFIRM SECTION -->
+
+        <section class="confirmation-text">
+            <p>Please note, this isn't a final confirmation. We'll affirm your reservation through the email and phone number provided. A copy of your request has also been sent to email.</p>
+            
+            <div class="confirmation-actions">
+                <button type="button" class="confirmation-button" onclick="location.href='reserve.html'">reschedule</button>
+                <button type="button" class="confirmation-button cancel-button" onclick="location.href='index.html'">cancel</button>
             </div>
-            <div class="form-group">
-                <input type="text" id="number" name="number" placeholder="Number" required>
-            </div>
-            <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-                <input type="time" id="time" name="time" placeholder="Time" required>
-            </div>
-            <div class="form-group">
-                <input type="date" id="date" name="date" required>
-            </div>
-            <div class="form-group">
-                <input type="number" id="seats" name="seats" placeholder="Seats" required>
-            </div>
-            <div class="form-group button-group">
-                <button type="button" class="book-now-button" onClick="location.href='/reserve/reserve-confirm.html'">Book Now</button>
-            </div>
-        </form>
-    </section>
+        </section>
 
     <!-- FOOTER -->
 
@@ -116,3 +98,4 @@
   </footer>
 </body>
 </html>
+

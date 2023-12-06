@@ -1,11 +1,9 @@
 /* WEB FONT */
-
 @import url('https://use.typekit.net/upf4itu.css');
 
 /* GLOBAL BOX PROPERTY */
-
 html {
- box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *, *:before, *:after {
@@ -20,8 +18,16 @@ body {
   margin: 0;
 }
 
-/* HEADER */
+/* UNIVERSAL STYLES */
 
+h2 {
+  font-size: 64px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* HEADER */
 .header {
   background-color: black;
   display: flex;
@@ -31,12 +37,11 @@ body {
 }
 
 .logo-img {
- width: 128px;
- height:128px;
+  width: 128px;
+  height:128px;
 }
 
 /* NAVIGATION */
-
 .nav ul {
   display: flex;
   list-style: none;
@@ -49,13 +54,14 @@ body {
   font-weight: 400;
   font-size: 24px;
   text-decoration: none;
+  transition: transform 0.3s ease; /* Add transition for transform and font-weight */
 }
 
 .nav a:hover {
-  font-weight: 600;
+  transform: scale(1.25); /* Slight increase in size on hover */
 }
 
-/* HERO */
+/* HERO STYLES */
 
 .hero {
   position: relative;
@@ -74,31 +80,27 @@ body {
   bottom: 10%;
 }
 
+.hero h1, .hero p {
+  color: #fff;
+}
+
 .hero h1 {
   font-size: 64px;
-  color: #fff;
   font-weight: normal;
   text-transform: uppercase;
 }
 
 .hero p {
   font-size: 16px;
-  color: #fff;
   font-weight: normal;
   margin-bottom: 20px;
   line-height: 24px;
   width: 512px;
 }
 
-/* HOME STYLES */
+/* BUTTON STYLES */
 
-/* Home Page Hero */
-
-.hero-home {
-  background-image: url('/images/home-img/home-hero.png');
-}
-
-.learn-more-button {
+.learn-more-button, .book-now-button, .confirmation-button {
   font-size: 24px;
   width: 256px;
   height: 64px;
@@ -114,12 +116,27 @@ body {
   text-align: center; 
 }
 
-.learn-more-button:hover {
+.learn-more-button:hover, .book-now-button:hover, .confirmation-button:hover {
   transform: scale(1.05); /* Slight increase in size on hover */
 }
 
-/* Home Page Content */
+/* HOME STYLES */
 
+/* Home Page Hero */
+.hero-home {
+  background-image: url('/images/home-img/home-hero.png');
+}
+
+css
+Copy code
+/* HOME STYLES */
+
+/* Home Page Hero */
+.hero-home {
+  background-image: url('/images/home-img/home-hero.png');
+}
+
+/* Home Page Content */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -131,13 +148,15 @@ body {
 .card {
   position: relative;
   margin: 20px;
-  overflow: hidden; 
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Add smooth transition for scaling */
 }
 
 .card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease; /* Add smooth transition for scaling */
 }
 
 .card-content {
@@ -153,12 +172,16 @@ body {
   font-weight: normal;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
-  margin-left: 10px; 
+  margin-left: 10px;
   margin-bottom: 10px;
 }
 
-.card:hover .card-content {
-  background: rgba(0, 0, 0, 0.6);
+.card:hover {
+  transform: scale(1.05); /* Slight increase in size on hover */
+}
+
+.card:hover img {
+  transform: scale(1.1); /* Slightly scale up the image */
 }
 
 /* MENU STYLES */
@@ -171,72 +194,132 @@ body {
 
 /* Menu Page Content */
 
+.menu-section {
+  padding: 16px 10%;
+}
+
+.menu-label h2 {
+  background-color: #000; 
+  color: #fff; 
+  padding: 18px;
+  margin-bottom: 10px;
+  font-size: 48px;
+}
+
 .accordion {
-  background-color: #000;
-  color: #fff;
+  display: flex; /* Use flexbox for aligning text and arrow */
+  justify-content: space-between;
+  background-color: transparent; /* Ensure background is transparent */
+  color: #000;
   cursor: pointer;
   padding: 18px;
-  border: none;
+  border: 3px solid #000; 
   text-align: left;
   outline: none;
   width: 100%;
   transition: 0.4s;
+  font-size: 24px;
 }
 
 .accordion.active, .accordion:hover {
-  background-color: #ccc;
+  border-color: #ccc; /* Light background on hover/active */
 }
 
+
+.accordion:after {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 18px; 
+  background-image: url('/images/menu-img/arrow.svg');
+  background-size: cover;
+  float: right;
+  transition: transform 0.4s ease;
+}
+
+.active:after {
+  transform: rotate(180deg);
+}
+
+
 .panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 0 18px;
   background-color: white;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease;
-}
-
-.accordion:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: #777;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
-}
-
-.menu-items {
-  list-style-type: none;
-  padding: 0;
+  margin-top: 16px;
+  margin-bottom: 16px ;
 }
 
 .menu-item {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
   margin-bottom: 10px;
 }
 
 .menu-item h3 {
-  font-size: 1.25em;
+  font-size: 16px;
   color: #000;
+  font-weight: 400;
+}
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: baseline; /* Align the baseline of h3 and price */
+  width: 100%; 
+  margin-bottom: 8px;
 }
 
 .menu-item p {
-  font-size: 1em;
+  font-size: 16px;
   color: #666;
+  font-weight: normal;
+  margin-bottom: 8px;
 }
 
 .menu-item .price {
-  font-size: 1em;
-  color: #333;
-  float: right;
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+}
+.menu-image {
+  position: relative;
+  width: 100%;
+  margin-left: 325px;
 }
 
 .menu-section-image {
-  width: 100%;
-  display: block;
-  margin-top: 20px;
+  width: 50%;
+  justify-content: right;
 }
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  padding: 10px; 
+}
+
+.image-overlay h3 {
+  font-size: 1.5em; 
+  margin: 5px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.image-overlay p {
+  font-size: 1em;
+  margin: 5px;
+  color:#fff;
+  font-weight: 400;
+}
+
 
 /* RESERVE STYLES */
 
@@ -292,21 +375,6 @@ body {
 .book-now-button {
   font-size: 24px;
   width: 100%; 
-  height: 64px; 
-  line-height: 64px; 
-  background-color: #000;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
-  display: inline-block; 
-  text-align: center; 
-}
-
-.book-now-button:hover {
-  transform: scale(1.05); /* Slightly increase the button size on hover */
 }
 
 /* Confirmation */
@@ -318,9 +386,7 @@ body {
 }
 
 .confirmation-text p {
-  font-size: 16px;
   margin-bottom: 30px;
-  font-weight: 200;
 }
 
 .confirmation-actions {
@@ -333,24 +399,11 @@ body {
 .confirmation-button,
 .cancel-button {
   width: 50%; 
-  padding: 16px 32px;
-  font-size: 24px;
-  text-transform: uppercase;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
-.confirmation-button {
-  color: #fff;
-  background-color: #000;
-  margin-bottom: 10px; /* Space between the buttons */
-}
-
-.confirmation-button:hover,
 .cancel-button:hover {
-  transform: scale(1.05); /* Slight increase in size on hover */
+  border-color: #000;
+  color: #000;
 }
 
 .cancel-button {
@@ -488,7 +541,6 @@ footer li {
 
 .social-links {
   display: flex; 
-  align-items: left; 
   gap: 2rem; 
 }
 

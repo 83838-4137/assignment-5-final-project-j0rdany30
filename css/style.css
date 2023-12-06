@@ -124,16 +124,7 @@ h2 {
 
 /* Home Page Hero */
 .hero-home {
-  background-image: url('/images/home-img/home-hero.png');
-}
-
-css
-Copy code
-/* HOME STYLES */
-
-/* Home Page Hero */
-.hero-home {
-  background-image: url('/images/home-img/home-hero.png');
+  background-image: url('images/home-img/home-hero.png');
 }
 
 /* Home Page Content */
@@ -189,7 +180,7 @@ Copy code
 /* Menu Page Hero */
 
 .hero-menu {
-  background-image: url('/images/menu-img/menu-hero.png');
+  background-image: url('images/menu-img/menu-hero.png');
 }
 
 /* Menu Page Content */
@@ -231,7 +222,7 @@ Copy code
   display: inline-block;
   width: 32px;
   height: 18px; 
-  background-image: url('/images/menu-img/arrow.svg');
+  background-image: url('images/menu-img/arrow.svg');
   background-size: cover;
   float: right;
   transition: transform 0.4s ease;
@@ -326,7 +317,7 @@ Copy code
 /* Reserve Hero */
 
 .hero-reserve {
-  background-image: url('/images/reserve-img/reserve-hero.png');
+  background-image: url('images/reserve-img/reserve-hero.png');
 }
 
 /* Reserve Content */
@@ -417,7 +408,7 @@ Copy code
 /* Gallery Hero */
 
 .hero-about {
-  background-image: url('/images/about-img/about-hero.png');
+  background-image: url('images/about-img/about-hero.png');
 }
 
 .about-section {
@@ -465,7 +456,7 @@ Copy code
 /* Gallery Hero */
 
 .hero-gallery {
-  background-image: url('/images/gallery-img/gallery-hero.png');
+  background-image: url('images/gallery-img/gallery-hero.png');
 }
 
 /* Gallery Content */

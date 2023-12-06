@@ -124,7 +124,7 @@ h2 {
 
 /* Home Page Hero */
 .hero-home {
-  background-image: url('images/home-hero.png');
+  background-image: url('css/home-hero.png');
 }
 
 /* Home Page Content */
@@ -180,7 +180,7 @@ h2 {
 /* Menu Page Hero */
 
 .hero-menu {
-  background-image: url('images/menu-img/menu-hero.png');
+  background-image: url('images/menu-img/menu-hero.png') center;
 }
 
 /* Menu Page Content */
@@ -408,7 +408,7 @@ h2 {
 /* Gallery Hero */
 
 .hero-about {
-  background-image: url('images/about-img/about-hero.png');
+  background-image: url('images/home-hero.png');
 }
 
 .about-section {

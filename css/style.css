@@ -74,6 +74,12 @@ h2 {
   background-position: center;
 }
 
+.hero-img {
+  width: 100%;
+  height: 540px; /* Adjust this as needed */
+  object-fit: cover; /* This ensures the image covers the entire hero area */
+}
+
 .hero-content {
   position: absolute;
   padding: 0 10%;
@@ -121,11 +127,6 @@ h2 {
 }
 
 /* HOME STYLES */
-
-/* Home Page Hero */
-.hero-home {
-  background-image: url('/css/home-hero.png'); /* Images are not being linked in git hub pages becusae of / in front of image */
-}
 
 /* Home Page Content */
 .cards {
@@ -177,61 +178,49 @@ h2 {
 
 /* MENU STYLES */
 
-/* Menu Page Hero */
-
-.hero-menu {
-  background-image: url('images/menu-img/menu-hero.png') center;
-}
-
-/* Menu Page Content */
-
 .menu-section {
   padding: 16px 10%;
+  margin-top: 48px;
+  margin-bottom: 48px;
 }
 
 .menu-label h2 {
   background-color: #000; 
   color: #fff; 
   padding: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   font-size: 48px;
 }
 
 .accordion {
-  display: flex; /* Use flexbox for aligning text and arrow */
-  justify-content: space-between;
-  background-color: transparent; /* Ensure background is transparent */
+  background-color: transparent;
   color: #000;
   cursor: pointer;
   padding: 18px;
-  border: 3px solid #000; 
+  border: 3px solid #000;
   text-align: left;
   outline: none;
   width: 100%;
   transition: 0.4s;
   font-size: 24px;
+  display: flex;
+  justify-content: space-between; /* Aligns text and arrow */
+  align-items: center; /* Centers items vertically */
+}
+
+.accordion-arrow {
+  width: 32px; /* Adjust size as needed */
+  height: auto;
+  transition: transform 0.4s ease; /* Transition for rotating arrow */
+}
+
+.accordion.active .accordion-arrow {
+  transform: rotate(180deg); /* Rotate arrow when accordion is active */
 }
 
 .accordion.active, .accordion:hover {
   border-color: #ccc; /* Light background on hover/active */
 }
-
-
-.accordion:after {
-  content: '';
-  display: inline-block;
-  width: 32px;
-  height: 18px; 
-  background-image: url('/images/menu-img/arrow.svg'); /* Images are not being linked in git hub pages becusae of / in front of image */
-  background-size: cover;
-  float: right;
-  transition: transform 0.4s ease;
-}
-
-.active:after {
-  transform: rotate(180deg);
-}
-
 
 .panel {
   display: grid;
@@ -313,14 +302,6 @@ h2 {
 
 
 /* RESERVE STYLES */
-
-/* Reserve Hero */
-
-.hero-reserve {
-  background-image: url('images/reserve-img/reserve-hero.png');
-}
-
-/* Reserve Content */
 
 /* Form */
 
@@ -405,12 +386,6 @@ h2 {
 
 /* ABOUT STYLES */
 
-/* Gallery Hero */
-
-.hero-about {
-  background-image: url('images/home-hero.png');
-}
-
 .about-section {
   background-color: #000; 
   color: #fff; 
@@ -452,14 +427,6 @@ h2 {
 }
 
 /* GALLERY STYLES */
-
-/* Gallery Hero */
-
-.hero-gallery {
-  background-image: url('images/gallery-img/gallery-hero.png');
-}
-
-/* Gallery Content */
 
 .gallery {
   display: flex;

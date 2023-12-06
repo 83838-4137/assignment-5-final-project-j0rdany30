@@ -124,7 +124,7 @@ h2 {
 
 /* Home Page Hero */
 .hero-home {
-  background-image: url('/images/home-img/home-hero.png');
+  background-image: url('images/home-hero.png');
 }
 
 /* Home Page Content */

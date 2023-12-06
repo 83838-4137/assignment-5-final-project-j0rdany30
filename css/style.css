@@ -124,7 +124,7 @@ h2 {
 
 /* Home Page Hero */
 .hero-home {
-  background-image: url('css/home-hero.png');
+  background-image: url('/css/home-hero.png'); /* Images are not being linked in git hub pages becusae of / in front of image */
 }
 
 /* Home Page Content */
@@ -222,7 +222,7 @@ h2 {
   display: inline-block;
   width: 32px;
   height: 18px; 
-  background-image: url('images/menu-img/arrow.svg');
+  background-image: url('/images/menu-img/arrow.svg'); /* Images are not being linked in git hub pages becusae of / in front of image */
   background-size: cover;
   float: right;
   transition: transform 0.4s ease;
